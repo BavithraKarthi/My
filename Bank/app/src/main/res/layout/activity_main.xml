@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.bank.MainActivity">
+
+    <TextView
+        android:text="Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:id="@+id/text1" />
+
+    <TextView
+        android:text="DOB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/DOB"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/dad_name"
+        android:layout_alignStart="@+id/dad_name" />
+
+    <TextView
+        android:text="NAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:id="@+id/name"
+        android:layout_below="@+id/text1"
+        android:layout_alignLeft="@+id/DOB"
+        android:layout_alignStart="@+id/DOB" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/fn"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/dad_name"
+        android:layout_alignBottom="@+id/dad_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/dob1"
+        android:textSize="14sp"
+        android:layout_alignTop="@+id/DOB"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/name1"
+        android:textSize="14sp"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioButton
+        android:text="Savings account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RB1"
+        android:layout_alignTop="@+id/Acc_type"
+        android:layout_alignLeft="@+id/fn"
+        android:layout_alignStart="@+id/fn"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <RadioButton
+        android:text="Current account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RB2"
+        android:layout_below="@+id/RB1"
+        android:layout_alignLeft="@+id/RB1"
+        android:layout_alignStart="@+id/RB1" />
+
+    <TextView
+        android:text="ACCOUNT TYPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/Acc_type"
+        android:layout_below="@+id/fn"
+        android:layout_alignLeft="@+id/dad_name"
+        android:layout_alignStart="@+id/dad_name" />
+
+    <TextView
+        android:text="FATHER'S NAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/dad_name"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/dob1"
+        android:layout_toLeftOf="@+id/text1"
+        android:layout_toStartOf="@+id/text1" />
+
+    <TextView
+        android:text="BANK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/BANK"
+        android:layout_below="@+id/RB2"
+        android:layout_alignLeft="@+id/Acc_type"
+        android:layout_alignStart="@+id/Acc_type"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/banks"
+        android:layout_alignTop="@+id/BANK"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/fn"
+        android:layout_alignStart="@+id/fn"
+        android:contentDescription="jsj"
+        />
+
+    <Button
+        android:text="ENTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/dad_name"
+        android:layout_toEndOf="@+id/dad_name"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/submit" />
+
+</RelativeLayout>
